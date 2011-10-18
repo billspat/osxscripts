@@ -34,14 +34,14 @@ if [ $? -ne 0 ] ; then
 	sudo ifconfig lo0 alias $lo_alias up
 fi
 
-echo "if no keys, then enter ssh password for tunnel via $remotehost..."
+echo "digging tunnel through $remotehost..."
 ssh -f $user@$remotehost -L $lo_alias:$localport:$server:445 -N
 
 if [ ! -d "/Volumes/$share" ]
 then
     mkdir "/Volumes/$share"
 fi
-echo "password for $share on $server"
+echo "connecting to $share on $server, mounting on /Volumes/$share"
 mount_smbfs  //$user@$lo_alias:4445/$share "/Volumes/$share"
 open "/Volumes/$share/"
 
