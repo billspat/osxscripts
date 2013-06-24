@@ -16,4 +16,5 @@ contents
    starts up spotlight service (down or not)
 *  stoplight.sh
    stops spotlight service and workers
-
+*  vboxkext.sh
+   loads/unloads/stats kexts used by virtual box
