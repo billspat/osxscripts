@@ -4,6 +4,7 @@ osxscripts
 handful of bash etc scripts for os x that I use for work.  
 *And a way to try out github.*  
 
+Note these work with 10.7 and not tested on later OS X
 
 contents
 ---------
